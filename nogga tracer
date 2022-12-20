@@ -1,0 +1,45 @@
+ local CurrentCamera = game:GetService "Workspace".CurrentCamera
+ local services = setmetatable({ }, {
+     __index = function(t,k)
+         return game:GetService(k)
+     end
+ })
+ local Players = services.Players
+ local Uisf = services.UserInputService
+ local Workgalaxy = services.Workspace
+ local RService = services.RunService
+ local SGui = services.StarterGui
+ local Inset2 = game:GetService("GuiService"):GetGuiInset().Y
+ 
+
+ 
+ 
+ local mousef = game.Players.LocalPlayer:GetMouse()
+ local Clientuser = Players.LocalPlayer
+ local runshit = game:GetService("RunService")
+ local localnigger = game.Players.LocalPlayer
+ local Line2 = Drawing.new("Line")
+ 
+ 
+ local camgay = Workspace.CurrentCamera
+ 
+ local CF = CFrame.new
+ local RNew = Ray.new
+ local Vec3 = Vector3.new
+ local Vec2 = Vector2.new
+ 
+ local Aimlock, MousePressed, CanNotify = false, false, false
+ local AimlockTarget, OldPre
+ 
+ 
+ 
+ local Target, PartMode, Partz, NotifMode, PredictionF
+ 
+ 
+getgenv().GetObscuringObjects = function(T)
+    if T and T:FindFirstChild(AimPart) and Clientuser and Clientuser.Character:FindFirstChild("Head") then 
+        local RayPos = workspace:FindPartOnRay(RNew(T[AimPart].Position, Clientuser.Character.Head.Position))
+        if RayPos then return RayPos:IsDescendantOf(T) end
+    end
+end
+ 
